@@ -14,7 +14,8 @@ import { getDeliveryConfig, getWhatsAppUrl } from "@/lib/contact-config";
 /** Compõe a landing page e fornece a configuração pública ao bloco de contato. */
 export default async function Home() {
   // A configuração de contato deve ser lida no ambiente que recebe a requisição.
-  await connection();
+  const pages = process.env.NEXT_PUBLIC_PAGES_DEMO === "true";
+  if (!pages) await connection();
 
   return (
     <>
@@ -29,7 +30,7 @@ export default async function Home() {
         <Team />
         <Testimonials />
         <Faq />
-        <Contact demo={!getDeliveryConfig()} whatsapp={getWhatsAppUrl()} />
+        <Contact demo={pages || !getDeliveryConfig()} whatsapp={getWhatsAppUrl()} />
       </main>
       <Footer />
     </>

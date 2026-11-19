@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl || "http://localhost:3000"),
   title,
   description,
-  alternates: siteUrl ? { canonical: "/" } : undefined,
+  alternates: siteUrl ? { canonical: siteUrl } : undefined,
   openGraph: { title, description, type: "website", locale: "pt_BR", siteName: "Aurora Odontologia", url: siteUrl },
   twitter: { card: "summary_large_image", title, description },
 };

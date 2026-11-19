@@ -2,7 +2,9 @@
 
 Landing page de portfólio para uma clínica odontológica fictícia. O projeto demonstra uma experiência completa de descoberta e contato, com direção visual editorial, conteúdo em português e integração opcional de e-mail.
 
-[![CI](https://github.com/oEnzoRibas/Aurora/actions/workflows/ci.yml/badge.svg)](https://github.com/oEnzoRibas/Aurora/actions/workflows/ci.yml)
+[![CI](https://github.com/Code-EJ/Aurora-Odontologia/actions/workflows/ci.yml/badge.svg)](https://github.com/Code-EJ/Aurora-Odontologia/actions/workflows/ci.yml)
+
+[Visitar a Aurora no GitHub Pages](https://code-ej.github.io/Aurora-Odontologia/)
 
 ## Demonstração da Plataforma
 

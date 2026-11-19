@@ -1,5 +1,20 @@
 # Operação e implantação
 
+## Demonstração no GitHub Pages
+
+A versão da Code está em [code-ej.github.io/Aurora-Odontologia](https://code-ej.github.io/Aurora-Odontologia/). O [workflow de publicação](../.github/workflows/pages.yml) testa a exportação em pull requests e publica o diretório `out` após alterações na `main`. O formulário valida dados fictícios no navegador. O envio via Resend está disponível no modo com servidor.
+
+Para reproduzir a exportação em uma sessão PowerShell, use:
+
+```powershell
+$env:GITHUB_PAGES = "true"
+$env:SITE_URL = "https://code-ej.github.io/Aurora-Odontologia/"
+npm ci
+npm run build
+```
+
+A URL define o prefixo dos arquivos estáticos. Para voltar ao build com servidor, remova `GITHUB_PAGES` do ambiente.
+
 ## Ambientes
 
 Copie [`.env.example`](../.env.example) para `.env.local` se quiser testar uma configuração local. O servidor deve ser reiniciado após a alteração. Na Vercel, configure as variáveis nos ambientes apropriados e faça um novo deploy para aplicar a mudança.
