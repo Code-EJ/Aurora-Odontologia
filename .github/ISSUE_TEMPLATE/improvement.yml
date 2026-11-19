@@ -1,0 +1,18 @@
+name: Propor uma melhoria
+description: Sugira uma mudança na interface, no código ou na documentação.
+title: "[Melhoria] "
+body:
+  - type: textarea
+    id: context
+    attributes:
+      label: Contexto
+      description: O que motivou a sugestão e quem se beneficia?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposta
+      description: Descreva a mudança e como verificar o resultado.
+    validations:
+      required: true
