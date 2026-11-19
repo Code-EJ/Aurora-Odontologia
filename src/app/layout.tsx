@@ -20,10 +20,13 @@ const instrument = localFont({
 const title = "Aurora Odontologia | Um novo olhar para o seu sorriso";
 const description = "Conheça a Aurora, uma clínica odontológica fictícia que reúne odontologia contemporânea e cuidado humano. Projeto demonstrativo de portfólio.";
 const siteUrl = process.env.SITE_URL;
+const siteAddress = new URL(siteUrl || "http://localhost:3000");
+// No Pages, o Next já inclui o basePath na imagem social gerada.
+const metadataBase = process.env.NEXT_PUBLIC_PAGES_DEMO === "true" ? new URL(siteAddress.origin) : siteAddress;
 
 /** Metadados compartilhados pela landing page e pelas prévias sociais. */
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl || "http://localhost:3000"),
+  metadataBase,
   title,
   description,
   alternates: siteUrl ? { canonical: siteUrl } : undefined,
