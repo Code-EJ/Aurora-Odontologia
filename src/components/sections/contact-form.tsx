@@ -31,6 +31,11 @@ export function ContactForm({ demo }: { demo: boolean }) {
 
   async function submit(data: ContactData) {
     setFeedback(undefined);
+    // handleSubmit já validou os dados com Zod. No Pages a simulação é inteiramente local.
+    if (process.env.NEXT_PUBLIC_PAGES_DEMO === "true") {
+      setFeedback({ error: false, message: "Demonstração concluída. Os campos foram validados no navegador e nenhum e-mail foi enviado." });
+      return;
+    }
     try {
       const response = await fetch("/api/contact", {
         method: "POST",

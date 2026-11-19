@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { publicAsset } from "@/lib/public-asset";
 import { CalendarDays, MapPin } from "lucide-react";
 
 /** Apresenta a marca, as chamadas para ação e a imagem prioritária da página. */
@@ -16,7 +17,7 @@ export function Hero() {
       </div>
       <figure className="hero-figure">
         <div className="hero-image">
-          <Image src="/images/consultorio.webp" alt="Consultório odontológico com cadeira clínica, parede de pedra e ampla janela para o jardim" fill loading="eager" fetchPriority="high" sizes="(max-width: 539px) calc(100vw - 40px), (max-width: 850px) calc(100vw - 64px), (max-width: 1300px) 48vw, 635px" />
+          <Image src={publicAsset("/images/consultorio.webp")} alt="Consultório odontológico com cadeira clínica, parede de pedra e ampla janela para o jardim" fill loading="eager" fetchPriority="high" sizes="(max-width: 539px) calc(100vw - 40px), (max-width: 850px) calc(100vw - 64px), (max-width: 1300px) 48vw, 635px" />
         </div>
         <figcaption><MapPin size={14} aria-hidden="true" /> Conceito de clínica · São Paulo, SP</figcaption>
       </figure>

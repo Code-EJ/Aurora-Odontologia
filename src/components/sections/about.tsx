@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { publicAsset } from "@/lib/public-asset";
 import { HeartHandshake, ScanLine, Sprout } from "lucide-react";
 import { Reveal } from "@/components/ui/reveal";
 
@@ -14,7 +15,7 @@ export function About() {
     <section id="clinica" className="section frame" aria-labelledby="about-title">
       <Reveal className="about-grid">
         <figure className="about-image">
-          <Image src="/images/recepcao.webp" alt="Recepção conceitual com balcão de madeira, poltronas verdes e iluminação indireta" fill sizes="(max-width: 850px) 100vw, 48vw" />
+          <Image src={publicAsset("/images/recepcao.webp")} alt="Recepção conceitual com balcão de madeira, poltronas verdes e iluminação indireta" fill sizes="(max-width: 850px) 100vw, 48vw" />
         </figure>
         <div>
           <p className="eyebrow"><span /> A CLÍNICA</p>

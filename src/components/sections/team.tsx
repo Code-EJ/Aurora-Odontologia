@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { publicAsset } from "@/lib/public-asset";
 import { team } from "@/data/clinic";
 import { Reveal } from "@/components/ui/reveal";
 
@@ -12,7 +13,7 @@ export function Team() {
       </Reveal>
       <Reveal className="team-grid">
         {team.map(({ name, area, image }) => <article key={name}>
-          <div className="team-photo"><Image src={image} alt="" fill sizes="(max-width: 539px) 100vw, 33vw" /></div>
+          <div className="team-photo"><Image src={publicAsset(image)} alt="" fill sizes="(max-width: 539px) 100vw, 33vw" /></div>
           <h3>{name}</h3>
           <p>{area}</p>
         </article>)}
